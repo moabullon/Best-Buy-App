@@ -1,0 +1,48 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 80px;
+}
+
+.App-header {
+  background-color: #003b64;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.Product-list{
+  margin-top: 30px;
+}
+
+
+.image {
+  width: 150px;
+  height: 150px;
+}
+
+.price {
+  display: block;
+}
+
+.model {
+  display: block;
+}
+
+.description {
+  display: inline-table;
+  word-wrap: break-word;
+  width: 60%;
+}
+
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
