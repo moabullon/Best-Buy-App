@@ -12,12 +12,6 @@ class App extends Component {
     }
   }
 
-  productSearch (){
-    let searchFromUser = this.searchProduct.value
-    axios.get(`http://localhost:3030/products?name[$like]=*{searchFromUser}*`).then(response =>  this.setState({
-        products: response.data.data
-    }))
-  }
 
 
   componentDidMount (){
@@ -38,6 +32,12 @@ class App extends Component {
 
 
 
+   productSearch (){
+     let searchFromUser = this.inputFromUser.value
+     axios.get(`http://localhost:3030/products?name[$like]=*{searchFromUser}*`).then(response =>  this.setState({
+         products: response.data.data
+     }))
+   }
 
 
   render() {
@@ -51,7 +51,7 @@ class App extends Component {
           List of available products
         </p>
         <div className="Search-area">
-        <input placeholder="enter product name" ref={(input) => { this.searchProduct = input }}/>
+        <input placeholder="enter product name" ref={(input) => { this.searchFromUser = input }}/>
         <button onClick={this.produtSearch.bind(this)}>Search</button>
         </div>
         {this.state.products.map(product => {
